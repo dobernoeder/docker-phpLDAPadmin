@@ -24,7 +24,7 @@ RUN apt-get update \
 	&& curl -o phpldapadmin.tar.gz -SL https://github.com/leenooks/phpLDAPadmin/archive/${PHPLDAPADMIN_VERSION}.tar.gz \
 	&& mkdir -p /var/www/phpldapadmin_bootstrap /var/www/phpldapadmin \
 	&& tar -xzf phpldapadmin.tar.gz --strip 1 -C /var/www/phpldapadmin_bootstrap \
-	&& apt-get remove -y --purge --auto-remove curl ca-certificates \
+	&& apt-get remove -y --purge --auto-remove ca-certificates \
 	&& rm phpldapadmin.tar.gz \
 	&& apt-get clean \
 	&& rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
